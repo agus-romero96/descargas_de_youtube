@@ -9,7 +9,9 @@ class MarcoPrincipal(wx.Frame):
         self.SetSize((800, 600))
         self.Centre()
         self.crear_menu()
+        self.Maximize()
         
+
         # Panel principal (opcional)
         panel = wx.Panel(self)
         texto = wx.StaticText(panel, label="Bienvenido a la aplicación. Usa el menú para acceder a las funciones.")
