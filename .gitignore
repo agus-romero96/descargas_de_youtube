@@ -1,6 +1,5 @@
 # Ignorar la carpeta del entorno virtual
-dependencias/
-entorno/
+.venv/
 build/
 dist/
 musicas/

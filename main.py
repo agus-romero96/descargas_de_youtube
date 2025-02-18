@@ -82,8 +82,16 @@ class MarcoPrincipal(wx.Frame):
         self.Hide()
 
     def on_ir_radios(self, event):
-        wx.MessageBox("Funcionalidad de radios no implementada.", "Información", wx.OK | wx.ICON_INFORMATION)
-    
+        try:
+            from interfaz_radio import FrameRadios
+            logger.info("importado el módulo para realizar búsquedas")
+        except ImportError as e:
+            logger.critical("Error al importar el módulo frame_subtitulos: %s", e)
+            return
+        frame_radios = FrameRadios(self, self)
+        frame_radios.Show()
+        self.Hide()
+
     def on_salir(self, event):
         self.Close()
 
